@@ -1,0 +1,12 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Blog</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <link th:replace="fragments/header.html :: head">
+</head>
+<body>
+<div th:replace="fragments/header.html :: navbar"></div>
+<p th:text="'Bonjour ' + ${nomTemplate} + ' !'" />
+</body>
+</html>

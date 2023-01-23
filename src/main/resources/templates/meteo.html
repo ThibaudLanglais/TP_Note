@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link th:replace="fragments/header.html :: head">
+</head>
+<body>
+    <div th:replace="fragments/header.html :: navbar"></div>
+    <h1>Page météo</h1>
+    <p th:text="${data.getCity().getName() + ' ' + data.getCity().getCp()}"></p>
+    <ul th:each="item:${data.getForecast()}">
+        <li th:text="${'[' + item.getDatetime() + '] entre ' + item.getTmin() + '°C et ' + item.getTmax() + '°C'}" />
+    </ul>
+</body>
+</html>
